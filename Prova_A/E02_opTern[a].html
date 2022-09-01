@@ -10,10 +10,23 @@
 
     //ENTRADA
 
+    const notaDaTurma1 = Number(prompt("Informe a nota da turma 1:"));
+    const notaDaTurma2 = Number(prompt("Informe a nota da turma 2:"));
+    const notaDaTurma3 = Number(prompt("Informe a nota da turma 3:"));
+    const notaDaTurma4 = Number(prompt("Informe a nota da turma 4:"));
+    const notaDaTurma5 = Number(prompt("Informe a nota da turma 5:"));
+    let resultadoNaTela;
 
     //PROCESSAMENTO
 
+    const media = (notaDaTurma1 + notaDaTurma2 + notaDaTurma3 + notaDaTurma4 + notaDaTurma5) / 5;
+
+    (media<=4) ? resultadoNaTela = "+- 50 alunos reprovados"
+    : (media<=7) ? resultadoNaTela = "+- 20 alunos reprovados"
+    : resultadoNaTela = "+- 8 alunos reprovados";
 
     //SAÍDA
-
+    
+    document.write(resultadoNaTela)
+    
 </script>
