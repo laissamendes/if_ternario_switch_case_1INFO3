@@ -6,15 +6,23 @@
     //Considere que:
     //Se a quantidade de parcelas for até 60 (inclusive), o juro a ser aplicado será de 18% (18/100) sob o preço do caminhão.
     //Se a quantidade de parcelas for até 96 (inclusive), o juro a ser aplicado será de 30% (30/100) sob o preço do caminhão.
-    //Se a quantidade de parcelas for acima de 120, o juro a ser aplicado será de 45% (45/100) sob o preço do caminhão.
+    //Se a quantidade de parcelas for acima de 96, o juro a ser aplicado será de 45% (45/100) sob o preço do caminhão.
     //Apresente o preço final do caminhão, considerando o juro estabelecido para a quantidade de parcelas.
 
     //ENTRADA
 
+const precoCaminhao = Number(prompt("Diga qual o valor do caminhão que você deseja comprar:"));
+const quantidadeDeParcelas = parseInt(prompt("Diga quantas parcelas deseja fazer:"));
+let resultadoNaTela;
 
     //PROCESSAMENTO
 
+(quantidadeDeParcelas<=60) ? resultadoNaTela = "O preço do caminhão, com as parcelas, custará R$" + ((18/100) * precoCaminhao) + "."
+: (quantidadeDeParcelas<=96) ? resultadoNaTela = "O preço do caminhão, com as parcelas, custará R$" + ((30/100) * precoCaminhao) + "."
+:resultadoNaTela = "O preço do caminhão, com as parcelas, custará R$" + ((45/100) * precoCaminhao) + ".";
 
     //SAÍDA
+
+    document.write(resultadoNaTela)
 
 </script>
