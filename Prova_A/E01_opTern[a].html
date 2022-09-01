@@ -17,9 +17,9 @@ let resultadoNaTela;
 
     //PROCESSAMENTO
 
-(quantidadeDeParcelas<=60) ? resultadoNaTela = "O preço do caminhão, com as parcelas, custará R$" + ((18/100) * precoCaminhao) + "."
-: (quantidadeDeParcelas<=96) ? resultadoNaTela = "O preço do caminhão, com as parcelas, custará R$" + ((30/100) * precoCaminhao) + "."
-:resultadoNaTela = "O preço do caminhão, com as parcelas, custará R$" + ((45/100) * precoCaminhao) + ".";
+(quantidadeDeParcelas<=60) ? resultadoNaTela = "O preço do caminhão, com o preço dos juros, custará R$" + ((18/100) * precoCaminhao).toFixed(2) + "."
+: (quantidadeDeParcelas<=96) ? resultadoNaTela = "O preço do caminhão, com o preço dos juros, custará R$" + ((30/100) * precoCaminhao).toFixed(2) + "."
+:resultadoNaTela = "O preço do caminhão, com o preço dos juros, custará R$" + ((45/100) * precoCaminhao).toFixed(2) + ".";
 
     //SAÍDA
 
