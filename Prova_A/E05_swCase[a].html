@@ -3,18 +3,33 @@
 
     //PROBLEMA: Aplicar desconto no preço do veículo
     //Peça para o vendedor informar o valor total do veículo e também informar o Ano do Veículo, considerando o seguinte cenário:
-    //Se o ano for inferior a 2010 (inclusive), o preço do veículo terá 3% (3/100) de desconto.
-    //Se o ano for interior a 2020 (inclusive), o preço do veículo terá 5% (5/100) de desconto.
+    //Se o ano for 2010 (inclusive), o preço do veículo terá 3% (3/100) de desconto.
+    //Se o ano for 2020 (inclusive), o preço do veículo terá 5% (5/100) de desconto.
     //Se o ano for superior a 2020, o preço do veículo terá 7% (7/100) de desconto.
     
     //Calcule e apresente o preço final do Veículo de acordo com o seu respectivo ano.
 
     //ENTRADA
 
+const valorVeiculo = Number(prompt("Diga o valor total do veículo:"));
+const anoDoVeiculo = parseInt(prompt("Diga o ano do veículo."));
+let resultadoNaTela;
 
     //PROCESSAMENTO
 
+    switch (anoDoVeiculo) {
+        case 2010:
+            resultadoNaTela = "Você pagará R$" + (valorVeiculo-(valorVeiculo*(3/100))).toFixed(2) + " no seu veículo."
+            break;
+            case 2020:
+            resultadoNaTela = "Você pagará R$" + (valorVeiculo-(valorVeiculo*(5/100))).toFixed(2) + " no seu veículo."
+            break;
+        default:
+            resultadoNaTela = "Você pagará R$" + (valorVeiculo-(valorVeiculo*(7/100))).toFixed(2) + " no seu veículo."
+            break;
+    }
 
     //SAÍDA
+    document.write(resultadoNaTela)
 
 </script>
